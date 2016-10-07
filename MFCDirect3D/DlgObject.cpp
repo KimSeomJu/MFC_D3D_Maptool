@@ -28,7 +28,14 @@ void CDlgObject::DoDataExchange(CDataExchange* pDX)
 
 
 BEGIN_MESSAGE_MAP(CDlgObject, CDialog)
+	ON_BN_CLICKED(IDC_RADIO1, &CDlgObject::OnBnClickedRadio1)
 END_MESSAGE_MAP()
 
 
 // CDlgObject 메시지 처리기입니다.
+
+
+void CDlgObject::OnBnClickedRadio1()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+}

@@ -37,7 +37,7 @@ HRESULT cMainGame::Init(void)
 	SCENE_MGR->AddLoadingScene( "로딩씬", new cScene_02() );
 	SCENE_MGR->AddScene("지형", new cScene_Terrain());
 	//게임 시작씬
-	SCENE_MGR->ChangeScene( "지형" );
+	SCENE_MGR->ChangeScene( "송대관" );
 	
 	//return E_FAIL;
 	return S_OK;		
@@ -66,7 +66,7 @@ HRESULT cMainGame::Init(HWND ghwnd)
 	SCENE_MGR->AddScene("지형", new cScene_Terrain());
 
 	//게임 시작씬
-	SCENE_MGR->ChangeScene("지형");
+	SCENE_MGR->ChangeScene("송대관");
 
 	//return E_FAIL;
 	return S_OK;
