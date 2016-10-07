@@ -50,7 +50,7 @@ void		cTrailRender::Init( float trailLiveTime, float width, LPDIRECT3DTEXTURE9 p
 	this->TrailGenStart();
 
 	//¿Ü°î Effect
-	m_pDistortEffect = RESOURCE_FX->GetResource( "../Resources/Shaders/Distort_1.fx" );
+	m_pDistortEffect = RESOURCE_FX->GetResource( "../../Resources/Shaders/Distort_1.fx" );
 
 
 	//GrabTexture

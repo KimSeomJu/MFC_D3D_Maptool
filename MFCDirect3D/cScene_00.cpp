@@ -29,12 +29,12 @@ HRESULT cScene_00::Scene_Init()
 	//원본 메쉬 로딩
 	cXMesh_Static* mesh = 
 		RESOURCE_STATICXMESH->GetResource( 
-		"../Resources/Meshes/Fighter/Fighter.X", &matCorrection );
+		"../../Resources/Meshes/Fighter/Fighter.X", &matCorrection );
 
 
 	cXMesh_Static* box = 
 		RESOURCE_STATICXMESH->GetResource( 
-		"../Resources/Meshes/Disc.x" );
+		"../../Resources/Meshes/Disc.x" );
 
 	//오브젝트 생성
 	cBaseObject* pNewObject1 = new cBaseObject();
@@ -74,9 +74,9 @@ HRESULT cScene_00::Scene_Init()
 	this->pTrailRender->Init( 
 		1.0f,					//꼬리 라이브 타임 ( 이게 크면 환영큐 사이즈가 커지고 꼬리가 오랬동안 남아있다 )
 		1.0f,					//폭
-		RESOURCE_TEXTURE->GetResource( "../Resources/Testures/TrailTest.png" ),	//메인 Texture
+		RESOURCE_TEXTURE->GetResource( "../../Resources/Testures/TrailTest.png" ),	//메인 Texture
 		D3DXCOLOR( 1, 0, 0, 1 ),												//메인 Texture 로 그릴때 컬러
-		RESOURCE_TEXTURE->GetResource( "../Resources/Testures/TrailTest.png" )	//외곡 그릴때 외곡 노말
+		RESOURCE_TEXTURE->GetResource( "../../Resources/Testures/TrailTest.png" )	//외곡 그릴때 외곡 노말
 		);
 
 

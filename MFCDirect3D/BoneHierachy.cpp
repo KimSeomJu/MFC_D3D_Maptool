@@ -160,7 +160,7 @@ HRESULT BONE_HIERARCHY::CreateMeshContainer( THIS_
 				RESOURCE_TEXTURE->GetResource( texFilePath );
 			//만약 Texture 가 없다면...
 			if( pNorTex == NULL ){
-				pNorTex = RESOURCE_TEXTURE->GetResource( "../Resources/Meshes/normalDefault.png" );
+				pNorTex = RESOURCE_TEXTURE->GetResource( "../../Resources/Meshes/normalDefault.png" );
 			}	
 			
 
@@ -173,7 +173,7 @@ HRESULT BONE_HIERARCHY::CreateMeshContainer( THIS_
 				RESOURCE_TEXTURE->GetResource( texFilePath );
 			//만약 Texture 가 없다면...
 			if( pEmiTex == NULL ){
-				pEmiTex = RESOURCE_TEXTURE->GetResource( "../Resources/Meshes/emissionDefault.png" );
+				pEmiTex = RESOURCE_TEXTURE->GetResource( "../../Resources/Meshes/emissionDefault.png" );
 			}
 
 
@@ -186,7 +186,7 @@ HRESULT BONE_HIERARCHY::CreateMeshContainer( THIS_
 				RESOURCE_TEXTURE->GetResource( texFilePath );
 			//만약 Texture 가 없다면...
 			if( pSpcTex == NULL ){
-				pSpcTex = RESOURCE_TEXTURE->GetResource( "../Resources/Meshes/specularDefault.png" );
+				pSpcTex = RESOURCE_TEXTURE->GetResource( "../../Resources/Meshes/specularDefault.png" );
 			}
 			//Texture 푸쉬
 			boneMesh->NormalTexs.push_back( pNorTex );
@@ -201,10 +201,10 @@ HRESULT BONE_HIERARCHY::CreateMeshContainer( THIS_
 			boneMesh->pMaterials[i].pTextureFilename = NULL;
 
 			//NULL 값이라도 대입해야 한다
-			boneMesh->DiffuseTexs.push_back( RESOURCE_TEXTURE->GetResource( "../Resources/Meshes/diffuseDefault.png" ) );
-			boneMesh->NormalTexs.push_back( RESOURCE_TEXTURE->GetResource( "../Resources/Meshes/normalDefault.png" ) );
-			boneMesh->SpecularTexs.push_back( RESOURCE_TEXTURE->GetResource( "../Resources/Meshes/specularDefault.png" ) );
-			boneMesh->EmissionTexs.push_back( RESOURCE_TEXTURE->GetResource( "../Resources/Meshes/emissionDefault.png" ) );
+			boneMesh->DiffuseTexs.push_back( RESOURCE_TEXTURE->GetResource( "../../Resources/Meshes/diffuseDefault.png" ) );
+			boneMesh->NormalTexs.push_back( RESOURCE_TEXTURE->GetResource( "../../Resources/Meshes/normalDefault.png" ) );
+			boneMesh->SpecularTexs.push_back( RESOURCE_TEXTURE->GetResource( "../../Resources/Meshes/specularDefault.png" ) );
+			boneMesh->EmissionTexs.push_back( RESOURCE_TEXTURE->GetResource( "../../Resources/Meshes/emissionDefault.png" ) );
 		}
 	}
 
