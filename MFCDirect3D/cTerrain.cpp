@@ -90,7 +90,7 @@ HRESULT cTerrain::Init(
 
 
 	//Terrain Effect ·Îµù
-	m_pTerrainEffect = RESOURCE_FX->GetResource( "../../Resources/Shaders/TerrainBase.fx");
+	m_pTerrainEffect = RESOURCE_FX->GetResource( "../../MapToolResource/Resources/Shaders/TerrainBase.fx");
 
 }
 

@@ -19,12 +19,12 @@ HRESULT cScene_Terrain::Scene_Init()
 {
 	m_pTerrain = new cTerrain();
 	m_pTerrain->Init(
-		"../../Resources/Testures/MyHeight512.bmp",
-		"../../Resources/Testures/terrain1.jpg",
-		"../../Resources/Testures/terrain2.png",
-		"../../Resources/Testures/terrain3.png",
-		"../../Resources/Testures/terrain4.png",
-		"../../Resources/Testures/Sheep_Splat.bmp",
+		"../../MapToolResource/Resources/Testures/MyHeight512.bmp",
+		"../../MapToolResource/Resources/Testures/terrain1.jpg",
+		"../../MapToolResource/Resources/Testures/terrain2.png",
+		"../../MapToolResource/Resources/Testures/terrain3.png",
+		"../../MapToolResource/Resources/Testures/terrain4.png",
+		"../../MapToolResource/Resources/Testures/Sheep_Splat.bmp",
 		1.0f,
 		100.0f,
 		3,

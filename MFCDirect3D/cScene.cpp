@@ -9,7 +9,7 @@ cScene::cScene(void)
 {
 	//환경 Effect 물어 놓는다.
 	this->evironmentEffect = 
-		RESOURCE_FX->GetResource( "../../Resources/Shaders/EvironmentCUBE.fx");
+		RESOURCE_FX->GetResource( "../../MapToolResource/Resources/Shaders/EvironmentCUBE.fx");
 
 	this->pMainCamera = new cCamera();
 
@@ -95,7 +95,7 @@ HRESULT cScene::Init()
 	this->scenePlaneIndex[5] = 2;
 
 
-	this->postEffect = RESOURCE_FX->GetResource( "../../Resources/Shaders/PostEffect.fx" );
+	this->postEffect = RESOURCE_FX->GetResource( "../../MapToolResource/Resources/Shaders/PostEffect.fx" );
 
 	return S_OK;
 }

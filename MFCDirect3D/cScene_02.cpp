@@ -30,7 +30,7 @@ HRESULT cScene_02::Scene_Init()
 	//원본 메쉬 로딩
 	cXMesh_Static* mesh = 
 		RESOURCE_STATICXMESH->GetResource( 
-		"../../Resources/Meshes/Tree/PineTree_01.X", &matCorrection );
+		"../../MapToolResource/Resources/Meshes/Tree/PineTree_01.X", &matCorrection );
 
 	this->object = new cBaseObject();
 	this->object->SetActive( true );
@@ -72,7 +72,7 @@ void cScene_02::Scene_Render1()
 
 	cXMesh_Skinned::SetCamera( this->pMainCamera );
 	cXMesh_Skinned::SetTechniqueName("ReciveShadow");
-	cXMesh_Skinned::sSkinnedMeshEffect->SetTexture("Ramp_Tex", RESOURCE_TEXTURE->GetResource("../../Resources/Testures/Ramp_1.png") );
+	cXMesh_Skinned::sSkinnedMeshEffect->SetTexture("Ramp_Tex", RESOURCE_TEXTURE->GetResource("../../MapToolResource/Resources/Testures/Ramp_1.png") );
 	cXMesh_Skinned::SetBaseLight( this->pSceneBaseDirectionLight );
 	
 	this->object->Render();

@@ -14,20 +14,20 @@ LPDIRECT3DTEXTURE9		cXMesh_Static::sDefaultEmissionTex  = NULL;
 cXMesh_Static::cXMesh_Static(void)
 {
 	if( sStaticMeshEffect == NULL ){
-		sStaticMeshEffect = RESOURCE_FX->GetResource( "../../Resources/Shaders/StaticMesh.fx");
+		sStaticMeshEffect = RESOURCE_FX->GetResource( "../../MapToolResource/Resources/Shaders/StaticMesh.fx");
 	}
 
 	if( sDefaultDiffuseTex == NULL )
-		sDefaultDiffuseTex = RESOURCE_TEXTURE->GetResource( "../../Resources/Meshes/diffuseDefault.png" );
+		sDefaultDiffuseTex = RESOURCE_TEXTURE->GetResource( "../../MapToolResource/Resources/Meshes/diffuseDefault.png" );
 
 	if( sDefaultNormalTex == NULL )
-		sDefaultNormalTex = RESOURCE_TEXTURE->GetResource( "../../Resources/Meshes/normalDefault.png" );
+		sDefaultNormalTex = RESOURCE_TEXTURE->GetResource( "../../MapToolResource/Resources/Meshes/normalDefault.png" );
 
 	if( sDefaultSpecularTex == NULL )
-		sDefaultSpecularTex = RESOURCE_TEXTURE->GetResource( "../../Resources/Meshes/specularDefault.png" );
+		sDefaultSpecularTex = RESOURCE_TEXTURE->GetResource( "../../MapToolResource/Resources/Meshes/specularDefault.png" );
 
 	if( sDefaultEmissionTex == NULL )
-		sDefaultEmissionTex = RESOURCE_TEXTURE->GetResource( "../../Resources/Meshes/emissionDefault.png" );
+		sDefaultEmissionTex = RESOURCE_TEXTURE->GetResource( "../../MapToolResource/Resources/Meshes/emissionDefault.png" );
 
 
 }
@@ -460,7 +460,7 @@ void cXMesh_Static::MeshCorrection( const D3DXMATRIXA16* pmatCorrection )
 void cXMesh_Static::SetCamera( const cCamera* Camera )
 {
 	if( sStaticMeshEffect == NULL ){
-		sStaticMeshEffect = RESOURCE_FX->GetResource( "../../Resources/Shaders/StaticMesh.fx");
+		sStaticMeshEffect = RESOURCE_FX->GetResource( "../../MapToolResource/Resources/Shaders/StaticMesh.fx");
 	}
 
 	D3DXMATRIXA16 matViewProj = Camera->GetViewProjectionMatrix();
@@ -478,7 +478,7 @@ void cXMesh_Static::SetCamera( const cCamera* Camera )
 void cXMesh_Static::SetBaseLight( cLight_Direction* pDirLight )
 {
 	if( sStaticMeshEffect == NULL ){
-		sStaticMeshEffect = RESOURCE_FX->GetResource( "../../Resources/Shaders/StaticMesh.fx");
+		sStaticMeshEffect = RESOURCE_FX->GetResource( "../../MapToolResource/Resources/Shaders/StaticMesh.fx");
 	}
 
 	sStaticMeshEffect->SetMatrix( "baseDirectionLight", &pDirLight->GetLightMatrix() );
@@ -489,7 +489,7 @@ void cXMesh_Static::SetBaseLight( cLight_Direction* pDirLight )
 void cXMesh_Static::SetLighting(cLight** pLights, int lightNum )
 {
 	if( sStaticMeshEffect == NULL ){
-		sStaticMeshEffect = RESOURCE_FX->GetResource( "../../Resources/Shaders/StaticMesh.fx");
+		sStaticMeshEffect = RESOURCE_FX->GetResource( "../../MapToolResource/Resources/Shaders/StaticMesh.fx");
 	}
 
 	//라이트 행렬 셋팅
@@ -505,7 +505,7 @@ void cXMesh_Static::SetLighting(cLight** pLights, int lightNum )
 void cXMesh_Static::SetLighting( std::vector<cLight*>* pLights )
 {
 	if( sStaticMeshEffect == NULL ){
-		sStaticMeshEffect = RESOURCE_FX->GetResource( "../../Resources/Shaders/StaticMesh.fx");
+		sStaticMeshEffect = RESOURCE_FX->GetResource( "../../MapToolResource/Resources/Shaders/StaticMesh.fx");
 	}
 	
 	//라이트 행렬 셋팅
@@ -523,7 +523,7 @@ void cXMesh_Static::SetLighting( std::vector<cLight*>* pLights )
 void cXMesh_Static::SetTechniqueName( std::string name )
 {
 	if( sStaticMeshEffect == NULL ){
-		sStaticMeshEffect = RESOURCE_FX->GetResource( "../../Resources/Shaders/StaticMesh.fx");
+		sStaticMeshEffect = RESOURCE_FX->GetResource( "../../MapToolResource/Resources/Shaders/StaticMesh.fx");
 	}
 
 	sStaticMeshEffect->SetTechnique( name.c_str() );

@@ -12,7 +12,7 @@ cXMesh_Skinned::cXMesh_Skinned(void)
 {
 	//Skinned Effect 로딩
 	if( sSkinnedMeshEffect == NULL )
-		sSkinnedMeshEffect = RESOURCE_FX->GetResource( "../../Resources/Shaders/SkinnedMesh.fx");
+		sSkinnedMeshEffect = RESOURCE_FX->GetResource( "../../MapToolResource/Resources/Shaders/SkinnedMesh.fx");
 }
 
 
@@ -629,7 +629,7 @@ void cXMesh_Skinned::SetCamera( const cCamera* Camera )
 {
 	//Skinned Effect 로딩
 	if( sSkinnedMeshEffect == NULL )
-		sSkinnedMeshEffect = RESOURCE_FX->GetResource( "../../Resources/Shaders/SkinnedMesh.fx");
+		sSkinnedMeshEffect = RESOURCE_FX->GetResource( "../../MapToolResource/Resources/Shaders/SkinnedMesh.fx");
 
 	D3DXMATRIXA16 matViewProj = Camera->GetViewProjectionMatrix();
 
@@ -648,7 +648,7 @@ void cXMesh_Skinned::SetBaseLight( cLight_Direction* pDirLight )
 {
 	//Skinned Effect 로딩
 	if( sSkinnedMeshEffect == NULL )
-		sSkinnedMeshEffect = RESOURCE_FX->GetResource( "../../Resources/Shaders/SkinnedMesh.fx");
+		sSkinnedMeshEffect = RESOURCE_FX->GetResource( "../../MapToolResource/Resources/Shaders/SkinnedMesh.fx");
 
 	sSkinnedMeshEffect->SetMatrix( "baseDirectionLight", &pDirLight->GetLightMatrix() );
 }
@@ -658,7 +658,7 @@ void cXMesh_Skinned::SetLighting(cLight** pLights, int lightNum )
 {
 	//Skinned Effect 로딩
 	if( sSkinnedMeshEffect == NULL )
-		sSkinnedMeshEffect = RESOURCE_FX->GetResource( "../../Resources/Shaders/SkinnedMesh.fx");
+		sSkinnedMeshEffect = RESOURCE_FX->GetResource( "../../MapToolResource/Resources/Shaders/SkinnedMesh.fx");
 
 	//라이트 행렬 셋팅
 	D3DXMATRIXA16 matLight[10];
@@ -675,7 +675,7 @@ void cXMesh_Skinned::SetLighting( std::vector<cLight*>* pLights )
 {
 	//Skinned Effect 로딩
 	if( sSkinnedMeshEffect == NULL )
-		sSkinnedMeshEffect = RESOURCE_FX->GetResource( "../../Resources/Shaders/SkinnedMesh.fx");
+		sSkinnedMeshEffect = RESOURCE_FX->GetResource( "../../MapToolResource/Resources/Shaders/SkinnedMesh.fx");
 
 	//라이트 행렬 셋팅
 	D3DXMATRIXA16 matLight[10];
@@ -693,7 +693,7 @@ void cXMesh_Skinned::SetTechniqueName( std::string name )
 {
 	//Skinned Effect 로딩
 	if( sSkinnedMeshEffect == NULL )
-		sSkinnedMeshEffect = RESOURCE_FX->GetResource( "../../Resources/Shaders/SkinnedMesh.fx");
+		sSkinnedMeshEffect = RESOURCE_FX->GetResource( "../../MapToolResource/Resources/Shaders/SkinnedMesh.fx");
 
 	sSkinnedMeshEffect->SetTechnique( name.c_str() );
 }

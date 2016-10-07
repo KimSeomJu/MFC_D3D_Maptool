@@ -67,12 +67,12 @@ HRESULT cScene_01::Scene_Init()
 
 	m_pTerrain  = new cTerrain();
 	m_pTerrain->Init(
-		"../../Resources/Testures/MyHeight512.bmp",
-		"../../Resources/Testures/terrain1.jpg", 
-		"../../Resources/Testures/terrain2.png", 
-		"../../Resources/Testures/terrain3.png", 
-		"../../Resources/Testures/terrain4.png", 
-		"../../Resources/Testures/Splat.png", 
+		"../../MapToolResource/Resources/Testures/MyHeight512.bmp",
+		"../../MapToolResource/Resources/Testures/terrain1.jpg", 
+		"../../MapToolResource/Resources/Testures/terrain2.png", 
+		"../../MapToolResource/Resources/Testures/terrain3.png", 
+		"../../MapToolResource/Resources/Testures/terrain4.png", 
+		"../../MapToolResource/Resources/Testures/Splat.png", 
 		1.0f, 
 		200.0f, 
 		3, 
@@ -80,12 +80,12 @@ HRESULT cScene_01::Scene_Init()
 
 	m_pTerrainShadow = new cTerrain();
 	m_pTerrainShadow->Init(
-		"../../Resources/Testures/MyHeight128.bmp",
-		"../../Resources/Testures/terrain1.jpg", 
-		"../../Resources/Testures/terrain2.png", 
-		"../../Resources/Testures/terrain3.png", 
-		"../../Resources/Testures/terrain4.png", 
-		"../../Resources/Testures/Splat.png", 
+		"../../MapToolResource/Resources/Testures/MyHeight128.bmp",
+		"../../MapToolResource/Resources/Testures/terrain1.jpg", 
+		"../../MapToolResource/Resources/Testures/terrain2.png", 
+		"../../MapToolResource/Resources/Testures/terrain3.png", 
+		"../../MapToolResource/Resources/Testures/terrain4.png", 
+		"../../MapToolResource/Resources/Testures/Splat.png", 
 		4.0f, 
 		200.0f, 
 		10, 
@@ -107,11 +107,11 @@ HRESULT cScene_01::Scene_Init()
 	//원본 메쉬 로딩
 	cXMesh_Static* mesh = 
 		RESOURCE_STATICXMESH->GetResource( 
-		"../../Resources/Meshes/Tree/PineTree_01.X", &matCorrection );
+		"../../MapToolResource/Resources/Meshes/Tree/PineTree_01.X", &matCorrection );
 
 	cXMesh_Static* Disc = 
 		RESOURCE_STATICXMESH->GetResource( 
-		"../../Resources/Meshes/Disc.x" );
+		"../../MapToolResource/Resources/Meshes/Disc.x" );
 
 	//오브젝트 생성
 	for( int i = 0 ; i < OBJECT_NUM ; i++ )
@@ -150,13 +150,13 @@ HRESULT cScene_01::Scene_Init()
 	this->pSceneBaseDirectionLight->pTransform->RotateWorld( 
 		90.0f * ONE_RAD, 0, 0 );
 
-	this->SetEnvironment("../../Resources/TextureCUBE/SuperKanjiCube.dds");
+	this->SetEnvironment("../../MapToolResource/Resources/TextureCUBE/SuperKanjiCube.dds");
 	
 
 	
 	D3DXMATRIXA16 matCorrection2;
 	D3DXMatrixScaling( &matCorrection2, 0.1f, 0.1f, 0.1f );
-	cXMesh_Skinned* pSkinned = RESOURCE_SKINNEDXMESH->GetResource( "../../Resources/Meshes/Female/Femail.X", &matCorrection2 );
+	cXMesh_Skinned* pSkinned = RESOURCE_SKINNEDXMESH->GetResource( "../../MapToolResource/Resources/Meshes/Female/Femail.X", &matCorrection2 );
 
 	cBaseObject* pChar;
 	pChar = new cBaseObject();
@@ -200,9 +200,9 @@ HRESULT cScene_01::Scene_Init()
 	this->pTrailRender->Init( 
 		1.0f,					//꼬리 라이브 타임 ( 이게 크면 환영큐 사이즈가 커지고 꼬리가 오랬동안 남아있다 )
 		1.0f,					//폭
-		RESOURCE_TEXTURE->GetResource( "../../Resources/Testures/TrailTest.png" ),	//메인 Texture
+		RESOURCE_TEXTURE->GetResource( "../../MapToolResource/Resources/Testures/TrailTest.png" ),	//메인 Texture
 		D3DXCOLOR( 1, 0, 0, 1 ),												//메인 Texture 로 그릴때 컬러
-		RESOURCE_TEXTURE->GetResource( "../../Resources/Testures/Stone-normal.jpg" )	//외곡 그릴때 외곡 노말
+		RESOURCE_TEXTURE->GetResource( "../../MapToolResource/Resources/Testures/Stone-normal.jpg" )	//외곡 그릴때 외곡 노말
 		);
 	this->pTrailRender->Transform.SetWorldPosition(  pChar->pTransform->GetWorldPosition() );
 
@@ -307,7 +307,7 @@ void cScene_01::Scene_Render1()
 	cXMesh_Static::SetBaseLight( this->pSceneBaseDirectionLight );
 
 	cXMesh_Skinned::SetCamera( this->pMainCamera );
-	cXMesh_Skinned::sSkinnedMeshEffect->SetTexture("Ramp_Tex", RESOURCE_TEXTURE->GetResource("../../Resources/Testures/Ramp_1.png") );
+	cXMesh_Skinned::sSkinnedMeshEffect->SetTexture("Ramp_Tex", RESOURCE_TEXTURE->GetResource("../../MapToolResource/Resources/Testures/Ramp_1.png") );
 	cXMesh_Skinned::SetBaseLight( this->pSceneBaseDirectionLight );
 	
 	for( int i = 0 ; i < this->cullObjects.size() ; i++ )
@@ -354,7 +354,7 @@ void cScene_01::Scene_Render1()
 
 	//이전까지 그려진 내용을 9 번Texture 에 얻는다.
 	GetDeviceGrabTexture( Device, this->pMainCamera->GetRenderTexture( 9 ) );
-	LPDIRECT3DTEXTURE9 pDistortNormal = RESOURCE_TEXTURE->GetResource( "../../Resources/Testures/CircleNormal.jpg" );
+	LPDIRECT3DTEXTURE9 pDistortNormal = RESOURCE_TEXTURE->GetResource( "../../MapToolResource/Resources/Testures/CircleNormal.jpg" );
 	this->pQuad->Render( this->pQuadTrans, this->pMainCamera->GetRenderTexture( 9 ), pDistortNormal, disAmout );
 	*/
 
@@ -395,7 +395,7 @@ void cScene_01::Scene_Render_AfterPostEffect( LPDIRECT3DTEXTURE9 pScreen )
 
 	//이전까지 그려진 내용을 9 번Texture 에 얻는다.
 	GetDeviceGrabTexture( Device, this->pMainCamera->GetRenderTexture( 9 ) );
-	LPDIRECT3DTEXTURE9 pDistortNormal = RESOURCE_TEXTURE->GetResource( "../../Resources/Testures/CircleNormal.jpg" );
+	LPDIRECT3DTEXTURE9 pDistortNormal = RESOURCE_TEXTURE->GetResource( "../../MapToolResource/Resources/Testures/CircleNormal.jpg" );
 	this->pQuad->Render( this->pQuadTrans, this->pMainCamera->GetRenderTexture( 9 ), pDistortNormal, disAmout );
 	
 
@@ -403,7 +403,7 @@ void cScene_01::Scene_Render_AfterPostEffect( LPDIRECT3DTEXTURE9 pScreen )
 	this->pQuadTrans->SetScale( 5, 5, 5 );
 	//이전까지 그려진 내용을 9 번Texture 에 얻는다.
 	GetDeviceGrabTexture( Device, this->pMainCamera->GetRenderTexture( 9 ) );
-	LPDIRECT3DTEXTURE9 pDistortNormal = RESOURCE_TEXTURE->GetResource( "../../Resources/Testures/Stone-normal.jpg" );
+	LPDIRECT3DTEXTURE9 pDistortNormal = RESOURCE_TEXTURE->GetResource( "../../MapToolResource/Resources/Testures/Stone-normal.jpg" );
 	this->pQuad->Render( this->pQuadTrans, this->pMainCamera->GetRenderTexture( 9 ), pDistortNormal, 0.05f );
 	*/
 
@@ -411,7 +411,7 @@ void cScene_01::Scene_Render_AfterPostEffect( LPDIRECT3DTEXTURE9 pScreen )
 	this->pQuadTrans->SetScale( 5, 5, 5 );
 	//이전까지 그려진 내용을 9 번Texture 에 얻는다.
 	GetDeviceGrabTexture( Device, this->pMainCamera->GetRenderTexture( 9 ) );
-	LPDIRECT3DTEXTURE9 pDistortNormal = RESOURCE_TEXTURE->GetResource( "../../Resources/Testures/Stone-normal.jpg" );
+	LPDIRECT3DTEXTURE9 pDistortNormal = RESOURCE_TEXTURE->GetResource( "../../MapToolResource/Resources/Testures/Stone-normal.jpg" );
 	this->pQuad->Render( this->pQuadTrans, this->pMainCamera->GetRenderTexture( 9 ), pDistortNormal, 0.005f );
 	*/
 }
