@@ -31,6 +31,7 @@
 #define IDD_MENUFORMVIEW                310
 #define IDD_DLG_TERRAIN                 311
 #define IDD_DLG_OBJECT                  312
+#define IDD_DLG_SKYBOX                  318
 #define IDC_TAB1                        1000
 #define IDC_BUTTON1                     1003
 #define IDC_EDIT1                       1005
@@ -57,7 +58,7 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        318
+#define _APS_NEXT_RESOURCE_VALUE        320
 #define _APS_NEXT_COMMAND_VALUE         32771
 #define _APS_NEXT_CONTROL_VALUE         1038
 #define _APS_NEXT_SYMED_VALUE           311

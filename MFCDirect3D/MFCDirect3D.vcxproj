@@ -151,6 +151,7 @@
     <ClInclude Include="cXMesh_Static.h" />
     <ClInclude Include="DlgObject.h" />
     <ClInclude Include="DlgTerrain.h" />
+    <ClInclude Include="Dlg_SkyBox.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="MenuFormView.h" />
     <ClInclude Include="MFCDirect3D.h" />
@@ -209,6 +210,7 @@
     <ClCompile Include="cXMesh_Static.cpp" />
     <ClCompile Include="DlgObject.cpp" />
     <ClCompile Include="DlgTerrain.cpp" />
+    <ClCompile Include="Dlg_SkyBox.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="MenuFormView.cpp" />
     <ClCompile Include="MFCDirect3D.cpp" />

@@ -16,6 +16,8 @@ CMenuFormView::CMenuFormView()
 {
 	m_pDlgTerrain = NULL;
 	m_pDlgObject = NULL;
+	m_pDlg_SkyBox = NULL;
+
 }
 
 // 탭에 등록할 다이얼로그 2개(지형과 오브젝트) 변수 메모리 해제
@@ -23,6 +25,8 @@ CMenuFormView::~CMenuFormView()
 {
 	SAFE_DELETE(m_pDlgTerrain);
 	SAFE_DELETE(m_pDlgObject);
+	SAFE_DELETE(m_pDlg_SkyBox);
+
 }
 
 void CMenuFormView::DoDataExchange(CDataExchange* pDX)
@@ -64,7 +68,8 @@ void CMenuFormView::OnInitialUpdate()
 	m_ctrlTabTerrain.DeleteAllItems();
 	m_ctrlTabTerrain.InsertItem(0, L"Terrain");
 	m_ctrlTabTerrain.InsertItem(1, L"Object");
-	
+	m_ctrlTabTerrain.InsertItem(2, L"SkyBox");
+
 	CRect rect;
 
 	m_pDlgTerrain = new CDlgTerrain;
@@ -78,6 +83,12 @@ void CMenuFormView::OnInitialUpdate()
 	m_pDlgObject->GetWindowRect(&rect);
 	m_pDlgObject->MoveWindow(5, 25, rect.Width(), rect.Height());
 	m_pDlgObject->ShowWindow(SW_HIDE);
+
+	m_pDlg_SkyBox = new CDlg_SkyBox;
+	m_pDlg_SkyBox->Create(IDD_DLG_SKYBOX, &m_ctrlTabTerrain);
+	m_pDlg_SkyBox->GetWindowRect(&rect);
+	m_pDlg_SkyBox->MoveWindow(5, 25, rect.Width(), rect.Height());
+	m_pDlg_SkyBox->ShowWindow(SW_HIDE);
 
 	UpdateData(FALSE);
 }
@@ -93,11 +104,18 @@ void CMenuFormView::OnTcnSelchangeTab1(NMHDR *pNMHDR, LRESULT *pResult)
 	case 0:
 		m_pDlgTerrain->ShowWindow(SW_SHOW);
 		m_pDlgObject->ShowWindow(SW_HIDE);
+		m_pDlg_SkyBox->ShowWindow(SW_HIDE);
 	break;
 	case 1:
 		m_pDlgTerrain->ShowWindow(SW_HIDE);
 		m_pDlgObject->ShowWindow(SW_SHOW);
+		m_pDlg_SkyBox->ShowWindow(SW_HIDE);
 	break;
+	case 2:
+		m_pDlgTerrain->ShowWindow(SW_HIDE);
+		m_pDlgObject->ShowWindow(SW_HIDE);
+		m_pDlg_SkyBox->ShowWindow(SW_SHOW);
+		break;
 	}
 	*pResult = 0;
 }

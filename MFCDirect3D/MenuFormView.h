@@ -2,6 +2,7 @@
 #include "afxcmn.h"
 #include "DlgTerrain.h"
 #include "DlgObject.h"
+#include "Dlg_SkyBox.h"
 
 // CMenuFormView Æû ºäÀÔ´Ï´Ù.
 
@@ -31,6 +32,7 @@ public:
 
 	CDlgTerrain *m_pDlgTerrain;
 	CDlgObject *m_pDlgObject;
+	CDlg_SkyBox *m_pDlg_SkyBox;
 
 	virtual void OnInitialUpdate();
 	afx_msg void OnTcnSelchangeTab1(NMHDR *pNMHDR, LRESULT *pResult);
