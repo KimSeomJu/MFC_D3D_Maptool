@@ -24,4 +24,13 @@ public:
 	afx_msg void OnBnClickedButton1();
 	afx_msg void OnBnClickedRadio1();
 	afx_msg void OnBnClickedRadio2();
+	CString m_TerrainX;
+	afx_msg void OnChangeEditOne();
+	CString m_TerrainY;
+
+private:
+	int m_TrinX;
+	int m_TrinY;
+
+
 };

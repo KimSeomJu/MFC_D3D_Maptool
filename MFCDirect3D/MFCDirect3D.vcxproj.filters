@@ -1,408 +1,414 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="소스 파일">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="DirectX">
+      <UniqueIdentifier>{bc83e9aa-cad3-490c-ab12-0633e4b9cfcd}</UniqueIdentifier>
     </Filter>
-    <Filter Include="헤더 파일">
+    <Filter Include="DirectX\BaseObject">
+      <UniqueIdentifier>{2517eeea-c491-4833-9090-0b06ffaf6df4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DirectX\Common">
+      <UniqueIdentifier>{b881126d-adc7-4b87-aaff-10617d2c0ef0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DirectX\Manager">
+      <UniqueIdentifier>{2e5c643c-d6c0-4e81-b5fb-48cfa5ffab67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DirectX\Scene">
+      <UniqueIdentifier>{01490aa6-cdfd-4df8-b1b7-8de344de2830}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC">
+      <UniqueIdentifier>{d4d198c6-8699-42be-92d9-b17ecdfc8264}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MFC\MFCTAB">
+      <UniqueIdentifier>{8d433092-351a-44ad-b64d-bc03bb9d223b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DirectX\D3D_CPP">
+      <UniqueIdentifier>{9040a4e8-9688-4f90-aafd-fc7ebeef9b1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DirectX\헤더 파일">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="리소스 파일">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Manager">
-      <UniqueIdentifier>{2e5c643c-d6c0-4e81-b5fb-48cfa5ffab67}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Scene">
-      <UniqueIdentifier>{01490aa6-cdfd-4df8-b1b7-8de344de2830}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\D3D_CPP">
-      <UniqueIdentifier>{9040a4e8-9688-4f90-aafd-fc7ebeef9b1e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="헤더 파일\D3D_Header">
+    <Filter Include="DirectX\헤더 파일\D3D_Header">
       <UniqueIdentifier>{7c10c7d9-0192-4543-96b3-5d37a8b92375}</UniqueIdentifier>
     </Filter>
-    <Filter Include="BaseObject">
-      <UniqueIdentifier>{2517eeea-c491-4833-9090-0b06ffaf6df4}</UniqueIdentifier>
+    <Filter Include="DirectX\소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Common">
-      <UniqueIdentifier>{b881126d-adc7-4b87-aaff-10617d2c0ef0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\MFCTAB">
-      <UniqueIdentifier>{8d433092-351a-44ad-b64d-bc03bb9d223b}</UniqueIdentifier>
+    <Filter Include="MFC\리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MFCDirect3D.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="stdafx.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>DirectX\헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="targetver.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="MainFrm.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="MFCDirect3DDoc.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="MFCDirect3DView.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>DirectX\헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Resource.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>DirectX\헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="cBaseObject.h">
-      <Filter>BaseObject</Filter>
+      <Filter>DirectX\BaseObject</Filter>
     </ClInclude>
     <ClInclude Include="cQuad.h">
-      <Filter>BaseObject</Filter>
+      <Filter>DirectX\BaseObject</Filter>
     </ClInclude>
     <ClInclude Include="cSetBoundObject.h">
-      <Filter>BaseObject</Filter>
+      <Filter>DirectX\BaseObject</Filter>
     </ClInclude>
     <ClInclude Include="BoneHierachy.h">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClInclude>
     <ClInclude Include="cCamera.h">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClInclude>
     <ClInclude Include="cLight.h">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClInclude>
     <ClInclude Include="cLight_Direction.h">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClInclude>
     <ClInclude Include="cLight_Point.h">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClInclude>
     <ClInclude Include="cPartcleEmitter.h">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClInclude>
     <ClInclude Include="cParticle.h">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClInclude>
     <ClInclude Include="cParticleQuad.h">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClInclude>
     <ClInclude Include="cQuadTree.h">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClInclude>
     <ClInclude Include="cSceneChangeEffect.h">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClInclude>
     <ClInclude Include="cSceneChangeEffectUpDown.h">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClInclude>
     <ClInclude Include="cSkinnedAnimation.h">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClInclude>
     <ClInclude Include="cTerrain.h">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClInclude>
     <ClInclude Include="cTrailRender.h">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClInclude>
     <ClInclude Include="cTransform.h">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClInclude>
     <ClInclude Include="cXMesh.h">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClInclude>
     <ClInclude Include="cXMesh_Skinned.h">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClInclude>
     <ClInclude Include="cXMesh_Static.h">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClInclude>
     <ClInclude Include="cDXFontManager.h">
-      <Filter>Manager</Filter>
+      <Filter>DirectX\Manager</Filter>
     </ClInclude>
     <ClInclude Include="cGizmoManager.h">
-      <Filter>Manager</Filter>
+      <Filter>DirectX\Manager</Filter>
     </ClInclude>
     <ClInclude Include="cKeyMgr.h">
-      <Filter>Manager</Filter>
+      <Filter>DirectX\Manager</Filter>
     </ClInclude>
     <ClInclude Include="cLogMgr.h">
-      <Filter>Manager</Filter>
+      <Filter>DirectX\Manager</Filter>
     </ClInclude>
     <ClInclude Include="cPhysicManager.h">
-      <Filter>Manager</Filter>
+      <Filter>DirectX\Manager</Filter>
     </ClInclude>
     <ClInclude Include="cResourceMgr.h">
-      <Filter>Manager</Filter>
+      <Filter>DirectX\Manager</Filter>
     </ClInclude>
     <ClInclude Include="cResourceMgr_ShaderFX.h">
-      <Filter>Manager</Filter>
+      <Filter>DirectX\Manager</Filter>
     </ClInclude>
     <ClInclude Include="cResourceMgr_Texture.h">
-      <Filter>Manager</Filter>
+      <Filter>DirectX\Manager</Filter>
     </ClInclude>
     <ClInclude Include="cResourceMgr_XSkinnedMesh.h">
-      <Filter>Manager</Filter>
+      <Filter>DirectX\Manager</Filter>
     </ClInclude>
     <ClInclude Include="cResourceMgr_XStaticMesh.h">
-      <Filter>Manager</Filter>
+      <Filter>DirectX\Manager</Filter>
     </ClInclude>
     <ClInclude Include="cScene_Mgr.h">
-      <Filter>Manager</Filter>
+      <Filter>DirectX\Manager</Filter>
     </ClInclude>
     <ClInclude Include="cSingletonBase.h">
-      <Filter>Manager</Filter>
+      <Filter>DirectX\Manager</Filter>
     </ClInclude>
     <ClInclude Include="cTimeMgr.h">
-      <Filter>Manager</Filter>
+      <Filter>DirectX\Manager</Filter>
     </ClInclude>
     <ClInclude Include="cScene.h">
-      <Filter>Scene</Filter>
+      <Filter>DirectX\Scene</Filter>
     </ClInclude>
     <ClInclude Include="cScene_00.h">
-      <Filter>Scene</Filter>
+      <Filter>DirectX\Scene</Filter>
     </ClInclude>
     <ClInclude Include="cScene_01.h">
-      <Filter>Scene</Filter>
+      <Filter>DirectX\Scene</Filter>
     </ClInclude>
     <ClInclude Include="cScene_02.h">
-      <Filter>Scene</Filter>
+      <Filter>DirectX\Scene</Filter>
     </ClInclude>
     <ClInclude Include="cBoundBox.h">
-      <Filter>헤더 파일\D3D_Header</Filter>
+      <Filter>DirectX\헤더 파일\D3D_Header</Filter>
     </ClInclude>
     <ClInclude Include="cBoundSphere.h">
-      <Filter>헤더 파일\D3D_Header</Filter>
+      <Filter>DirectX\헤더 파일\D3D_Header</Filter>
     </ClInclude>
     <ClInclude Include="cFrustum.h">
-      <Filter>헤더 파일\D3D_Header</Filter>
+      <Filter>DirectX\헤더 파일\D3D_Header</Filter>
     </ClInclude>
     <ClInclude Include="cImage.h">
-      <Filter>헤더 파일\D3D_Header</Filter>
+      <Filter>DirectX\헤더 파일\D3D_Header</Filter>
     </ClInclude>
     <ClInclude Include="cMainGame.h">
-      <Filter>헤더 파일\D3D_Header</Filter>
+      <Filter>DirectX\헤더 파일\D3D_Header</Filter>
     </ClInclude>
     <ClInclude Include="cSpriteManager.h">
-      <Filter>헤더 파일\D3D_Header</Filter>
+      <Filter>DirectX\헤더 파일\D3D_Header</Filter>
     </ClInclude>
     <ClInclude Include="MyUtil.h">
-      <Filter>헤더 파일\D3D_Header</Filter>
+      <Filter>DirectX\헤더 파일\D3D_Header</Filter>
     </ClInclude>
     <ClInclude Include="cScene_Terrain.h">
-      <Filter>Scene</Filter>
+      <Filter>DirectX\Scene</Filter>
     </ClInclude>
     <ClInclude Include="DlgTerrain.h">
-      <Filter>소스 파일\MFCTAB</Filter>
+      <Filter>MFC\MFCTAB</Filter>
     </ClInclude>
     <ClInclude Include="DlgObject.h">
-      <Filter>소스 파일\MFCTAB</Filter>
+      <Filter>MFC\MFCTAB</Filter>
     </ClInclude>
     <ClInclude Include="MenuFormView.h">
-      <Filter>소스 파일\MFCTAB</Filter>
+      <Filter>MFC\MFCTAB</Filter>
     </ClInclude>
     <ClInclude Include="Dlg_SkyBox.h">
-      <Filter>소스 파일\MFCTAB</Filter>
+      <Filter>MFC\MFCTAB</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="MFCDirect3D.h">
+      <Filter>MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="MFCDirect3DDoc.h">
+      <Filter>MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="MFCDirect3DView.h">
+      <Filter>MFC</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MFCDirect3D.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="stdafx.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="MainFrm.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="MFCDirect3DDoc.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="MFCDirect3DView.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>DirectX\소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="cBaseObject.cpp">
-      <Filter>BaseObject</Filter>
+      <Filter>DirectX\BaseObject</Filter>
     </ClCompile>
     <ClCompile Include="cQuad.cpp">
-      <Filter>BaseObject</Filter>
+      <Filter>DirectX\BaseObject</Filter>
     </ClCompile>
     <ClCompile Include="cSetBoundObject.cpp">
-      <Filter>BaseObject</Filter>
+      <Filter>DirectX\BaseObject</Filter>
     </ClCompile>
     <ClCompile Include="BoneHierachy.cpp">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClCompile>
     <ClCompile Include="cCamera.cpp">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClCompile>
     <ClCompile Include="cLight.cpp">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClCompile>
     <ClCompile Include="cLight_Direction.cpp">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClCompile>
     <ClCompile Include="cLight_Point.cpp">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClCompile>
     <ClCompile Include="cPartcleEmitter.cpp">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClCompile>
     <ClCompile Include="cParticle.cpp">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClCompile>
     <ClCompile Include="cParticleQuad.cpp">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClCompile>
     <ClCompile Include="cQuadTree.cpp">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClCompile>
     <ClCompile Include="cSceneChangeEffect.cpp">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClCompile>
     <ClCompile Include="cSceneChangeEffectUpDown.cpp">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClCompile>
     <ClCompile Include="cSkinnedAnimation.cpp">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClCompile>
     <ClCompile Include="cTerrain.cpp">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClCompile>
     <ClCompile Include="cTrailRender.cpp">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClCompile>
     <ClCompile Include="cTransform.cpp">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClCompile>
     <ClCompile Include="cXMesh.cpp">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClCompile>
     <ClCompile Include="cXMesh_Skinned.cpp">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClCompile>
     <ClCompile Include="cXMesh_Static.cpp">
-      <Filter>Common</Filter>
+      <Filter>DirectX\Common</Filter>
     </ClCompile>
     <ClCompile Include="cDXFontManager.cpp">
-      <Filter>Manager</Filter>
+      <Filter>DirectX\Manager</Filter>
     </ClCompile>
     <ClCompile Include="cGizmoManager.cpp">
-      <Filter>Manager</Filter>
+      <Filter>DirectX\Manager</Filter>
     </ClCompile>
     <ClCompile Include="cKeyMgr.cpp">
-      <Filter>Manager</Filter>
+      <Filter>DirectX\Manager</Filter>
     </ClCompile>
     <ClCompile Include="cLogMgr.cpp">
-      <Filter>Manager</Filter>
+      <Filter>DirectX\Manager</Filter>
     </ClCompile>
     <ClCompile Include="cPhysicManager.cpp">
-      <Filter>Manager</Filter>
+      <Filter>DirectX\Manager</Filter>
     </ClCompile>
     <ClCompile Include="cResourceMgr.cpp">
-      <Filter>Manager</Filter>
+      <Filter>DirectX\Manager</Filter>
     </ClCompile>
     <ClCompile Include="cResourceMgr_ShaderFX.cpp">
-      <Filter>Manager</Filter>
+      <Filter>DirectX\Manager</Filter>
     </ClCompile>
     <ClCompile Include="cResourceMgr_Texture.cpp">
-      <Filter>Manager</Filter>
+      <Filter>DirectX\Manager</Filter>
     </ClCompile>
     <ClCompile Include="cResourceMgr_XSkinnedMesh.cpp">
-      <Filter>Manager</Filter>
+      <Filter>DirectX\Manager</Filter>
     </ClCompile>
     <ClCompile Include="cResourceMgr_XStaticMesh.cpp">
-      <Filter>Manager</Filter>
+      <Filter>DirectX\Manager</Filter>
     </ClCompile>
     <ClCompile Include="cScene_Mgr.cpp">
-      <Filter>Manager</Filter>
+      <Filter>DirectX\Manager</Filter>
     </ClCompile>
     <ClCompile Include="cSingletonBase.cpp">
-      <Filter>Manager</Filter>
+      <Filter>DirectX\Manager</Filter>
     </ClCompile>
     <ClCompile Include="cTimeMgr.cpp">
-      <Filter>Manager</Filter>
+      <Filter>DirectX\Manager</Filter>
     </ClCompile>
     <ClCompile Include="cScene.cpp">
-      <Filter>Scene</Filter>
+      <Filter>DirectX\Scene</Filter>
     </ClCompile>
     <ClCompile Include="cScene_00.cpp">
-      <Filter>Scene</Filter>
+      <Filter>DirectX\Scene</Filter>
     </ClCompile>
     <ClCompile Include="cScene_01.cpp">
-      <Filter>Scene</Filter>
+      <Filter>DirectX\Scene</Filter>
     </ClCompile>
     <ClCompile Include="cScene_02.cpp">
-      <Filter>Scene</Filter>
+      <Filter>DirectX\Scene</Filter>
     </ClCompile>
     <ClCompile Include="cBoundBox.cpp">
-      <Filter>소스 파일\D3D_CPP</Filter>
+      <Filter>DirectX\D3D_CPP</Filter>
     </ClCompile>
     <ClCompile Include="cBoundSphere.cpp">
-      <Filter>소스 파일\D3D_CPP</Filter>
+      <Filter>DirectX\D3D_CPP</Filter>
     </ClCompile>
     <ClCompile Include="cFrustum.cpp">
-      <Filter>소스 파일\D3D_CPP</Filter>
+      <Filter>DirectX\D3D_CPP</Filter>
     </ClCompile>
     <ClCompile Include="cImage.cpp">
-      <Filter>소스 파일\D3D_CPP</Filter>
+      <Filter>DirectX\D3D_CPP</Filter>
     </ClCompile>
     <ClCompile Include="cMainGame.cpp">
-      <Filter>소스 파일\D3D_CPP</Filter>
+      <Filter>DirectX\D3D_CPP</Filter>
     </ClCompile>
     <ClCompile Include="cSpriteManager.cpp">
-      <Filter>소스 파일\D3D_CPP</Filter>
+      <Filter>DirectX\D3D_CPP</Filter>
     </ClCompile>
     <ClCompile Include="MyUtil.cpp">
-      <Filter>소스 파일\D3D_CPP</Filter>
+      <Filter>DirectX\D3D_CPP</Filter>
     </ClCompile>
     <ClCompile Include="cScene_Terrain.cpp">
-      <Filter>Scene</Filter>
+      <Filter>DirectX\Scene</Filter>
     </ClCompile>
     <ClCompile Include="DlgObject.cpp">
-      <Filter>소스 파일\MFCTAB</Filter>
+      <Filter>MFC\MFCTAB</Filter>
     </ClCompile>
     <ClCompile Include="DlgTerrain.cpp">
-      <Filter>소스 파일\MFCTAB</Filter>
+      <Filter>MFC\MFCTAB</Filter>
     </ClCompile>
     <ClCompile Include="MenuFormView.cpp">
-      <Filter>소스 파일\MFCTAB</Filter>
+      <Filter>MFC\MFCTAB</Filter>
     </ClCompile>
     <ClCompile Include="Dlg_SkyBox.cpp">
-      <Filter>소스 파일\MFCTAB</Filter>
+      <Filter>MFC\MFCTAB</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="MFCDirect3D.cpp">
+      <Filter>MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="MFCDirect3DDoc.cpp">
+      <Filter>MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="MFCDirect3DView.cpp">
+      <Filter>MFC</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MFCDirect3D.rc">
-      <Filter>리소스 파일</Filter>
+      <Filter>MFC\리소스 파일</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="UserImages.bmp">
-      <Filter>리소스 파일</Filter>
+      <Filter>MFC\리소스 파일</Filter>
     </Image>
     <Image Include="res\MFCDirect3DDoc.ico">
-      <Filter>리소스 파일</Filter>
+      <Filter>MFC\리소스 파일</Filter>
     </Image>
     <Image Include="res\MFCDirect3D.ico">
-      <Filter>리소스 파일</Filter>
+      <Filter>MFC\리소스 파일</Filter>
     </Image>
     <Image Include="res\Toolbar.bmp">
-      <Filter>리소스 파일</Filter>
+      <Filter>MFC\리소스 파일</Filter>
     </Image>
     <Image Include="res\Toolbar256.bmp">
-      <Filter>리소스 파일</Filter>
+      <Filter>MFC\리소스 파일</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\MFCDirect3D.rc2">
-      <Filter>리소스 파일</Filter>
+      <Filter>MFC\리소스 파일</Filter>
     </None>
   </ItemGroup>
 </Project>

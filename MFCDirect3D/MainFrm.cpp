@@ -225,7 +225,6 @@ void CMainFrame::Dump(CDumpContext& dc) const
 }
 #endif //_DEBUG
 
-
 // CMainFrame 메시지 처리기
 
 void CMainFrame::OnViewCustomize()

@@ -13,6 +13,8 @@ IMPLEMENT_DYNAMIC(CDlgTerrain, CDialog)
 
 CDlgTerrain::CDlgTerrain(CWnd* pParent /*=NULL*/)
 	: CDialog(CDlgTerrain::IDD, pParent)
+	, m_TerrainX(_T(""))
+	, m_TerrainY(_T(""))
 {
 
 }
@@ -24,6 +26,8 @@ CDlgTerrain::~CDlgTerrain()
 void CDlgTerrain::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
+	DDX_Text(pDX, IDC_EDIT1, m_TerrainX);
+	DDX_Text(pDX, IDC_EDIT2, m_TerrainY);
 }
 
 
@@ -33,39 +37,34 @@ BEGIN_MESSAGE_MAP(CDlgTerrain, CDialog)
 	ON_BN_CLICKED(IDC_BUTTON1, &CDlgTerrain::OnBnClickedButton1)
 	ON_BN_CLICKED(IDC_RADIO1, &CDlgTerrain::OnBnClickedRadio1)
 	ON_BN_CLICKED(IDC_RADIO2, &CDlgTerrain::OnBnClickedRadio2)
+	ON_EN_ERRSPACE(IDC_EDIT1, &CDlgTerrain::OnChangeEditOne)
 END_MESSAGE_MAP()
 
 
 // CDlgTerrain 메시지 처리기입니다.
 
-
+//X
 void CDlgTerrain::OnEnChangeEdit1()
 {
-	// TODO:  RICHEDIT 컨트롤인 경우, 이 컨트롤은
-	// CDialog::OnInitDialog() 함수를 재지정 
-	//하고 마스크에 OR 연산하여 설정된 ENM_CHANGE 플래그를 지정하여 CRichEditCtrl().SetEventMask()를 호출하지 않으면
-	// 이 알림 메시지를 보내지 않습니다.
-
-	// TODO:  여기에 컨트롤 알림 처리기 코드를 추가합니다.
-
+	//실시간으로 입력되는 숫자값을 갱신
+	UpdateData(TRUE);
 }
 
-
+//Y
 void CDlgTerrain::OnEnChangeEdit2()
 {
-	// TODO:  RICHEDIT 컨트롤인 경우, 이 컨트롤은
-	// CDialog::OnInitDialog() 함수를 재지정 
-	//하고 마스크에 OR 연산하여 설정된 ENM_CHANGE 플래그를 지정하여 CRichEditCtrl().SetEventMask()를 호출하지 않으면
-	// 이 알림 메시지를 보내지 않습니다.
-
-	// TODO:  여기에 컨트롤 알림 처리기 코드를 추가합니다.
-
+	//실시간으로 입력되는 숫자값을 갱신
+	UpdateData(TRUE);
 }
 
-//X * Y 적용하기
+//X * Y 적용하기 버튼
 void CDlgTerrain::OnBnClickedButton1()
 {
-	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	UpdateData(TRUE);
+	//CString -> int 
+	m_TrinX = _ttoi(m_TerrainX);
+	m_TrinY = _ttoi(m_TerrainY);
+	UpdateData(FALSE);
 
 }
 
@@ -78,6 +77,12 @@ void CDlgTerrain::OnBnClickedRadio1()
 
 //Down Brush
 void CDlgTerrain::OnBnClickedRadio2()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+}
+
+
+void CDlgTerrain::OnChangeEditOne()
 {
 	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
 }
