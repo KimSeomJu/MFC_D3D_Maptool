@@ -84,6 +84,117 @@ using namespace std;
 extern HWND			g_hWnd;		//윈도우 핸들 ( 자신의 프로그램에서 돌고있는 윈도우 번호 )
 extern HINSTANCE	g_hInst;	//프로그램 인스턴스 핸들 ( OS 가 부여한 프로그램 번호 )
 
+//===== MFC -> DirectX 전역변수=======================================================
+
+enum ToolTab
+{
+	TERRAIN,
+	OBJECT,
+	SKYBOX
+};
+
+extern ToolTab g_ToolTab;
+//=================================================
+//===================terrain tab===================
+//=================================================
+
+//터레인 x,y값
+extern int g_terrainX;
+extern int g_terrainY;
+
+enum CB_TerrainLandlist
+{
+	LandUnselect,
+	LandGrass,
+	LandLand,
+	LandStone
+};
+extern CB_TerrainLandlist g_CB_Landlist;			//터레인콤보박스
+
+enum CB_TerrainLandBrush
+{
+	BrushUnselect,
+	BrushSample1,
+	BrushSample2,
+	BrushSample3
+};
+extern CB_TerrainLandBrush g_CB_LandBrushList;		//브러시콤보박스
+
+extern CString g_heightMapPath;						//높이맵 파일경로
+extern bool g_isCkActBtnHeightMap;					//isClickedAcceptButton
+
+extern int g_terrainBrushSize;
+extern int g_terrainBrushPower;
+
+enum RB_TerrainBrushKind
+{
+	upbrush,
+	downbrush
+};
+extern RB_TerrainBrushKind g_RB_TerrainBrushKind;
+
+//=================================================
+//===================object tab===================
+//=================================================
+
+enum TREE_Object
+{
+	objectUnselect,
+	trees,
+	rocks,
+	builds
+};
+extern TREE_Object g_TREE_Object;
+
+enum TREE_ObjectTree
+{
+	treeUnselect,
+	tree1,
+	tree2,
+	tree3
+};
+extern TREE_ObjectTree g_TREE_ObjectTree;
+
+enum TREE_ObjectRock
+{
+	rockUnselect,
+	rock1,
+	rock2,
+	rock3
+};
+extern TREE_ObjectRock g_TREE_ObjectRock;
+
+enum TREE_ObjectBuild
+{
+	buildUnselect,
+	build1,
+	build2,
+	build3
+};
+extern TREE_ObjectBuild g_TREE_ObjectBuild;
+
+enum RB_ObjectBrushKind
+{
+	manybrush,
+	onebrush
+};
+extern RB_ObjectBrushKind g_RB_ObjectBrushKind;
+//=================================================
+//===================skybox tab====================
+//=================================================
+
+extern CString g_skyBoxName;						//큐브맵 파일경로
+extern bool g_isCkActBtnSkyBox;						//isClickedAcceptButton
+
+extern int g_objectBrushSize;
+
+extern int g_objectCtrlScale;
+extern int g_objectCtrlRX;
+extern int g_objectCtrlRY;
+extern int g_objectCtrlRZ;
+
+
+//===================================================================================
 #include <vector>
 #include <map>
 

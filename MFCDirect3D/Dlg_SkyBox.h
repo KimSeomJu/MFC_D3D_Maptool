@@ -29,7 +29,6 @@ public:
 
 
 private:
-	CString _fileName;
 
 public:
 	CString m_EditOne;

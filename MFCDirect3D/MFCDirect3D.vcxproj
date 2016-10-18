@@ -14,12 +14,13 @@
     <ProjectGuid>{EF38767F-1360-4C2C-9A36-B8B2C3FF245C}</ProjectGuid>
     <RootNamespace>MFCDirect3D</RootNamespace>
     <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
@@ -133,14 +134,12 @@
     <ClInclude Include="cScene.h" />
     <ClInclude Include="cSceneChangeEffect.h" />
     <ClInclude Include="cSceneChangeEffectUpDown.h" />
-    <ClInclude Include="cScene_00.h" />
-    <ClInclude Include="cScene_01.h" />
-    <ClInclude Include="cScene_02.h" />
+    <ClInclude Include="cSceneMapTool.h" />
     <ClInclude Include="cScene_Mgr.h" />
-    <ClInclude Include="cScene_Terrain.h" />
     <ClInclude Include="cSetBoundObject.h" />
     <ClInclude Include="cSingletonBase.h" />
     <ClInclude Include="cSkinnedAnimation.h" />
+    <ClInclude Include="cSkyBox.h" />
     <ClInclude Include="cSpriteManager.h" />
     <ClInclude Include="cTerrain.h" />
     <ClInclude Include="cTimeMgr.h" />
@@ -192,14 +191,12 @@
     <ClCompile Include="cScene.cpp" />
     <ClCompile Include="cSceneChangeEffect.cpp" />
     <ClCompile Include="cSceneChangeEffectUpDown.cpp" />
-    <ClCompile Include="cScene_00.cpp" />
-    <ClCompile Include="cScene_01.cpp" />
-    <ClCompile Include="cScene_02.cpp" />
+    <ClCompile Include="cSceneMapTool.cpp" />
     <ClCompile Include="cScene_Mgr.cpp" />
-    <ClCompile Include="cScene_Terrain.cpp" />
     <ClCompile Include="cSetBoundObject.cpp" />
     <ClCompile Include="cSingletonBase.cpp" />
     <ClCompile Include="cSkinnedAnimation.cpp" />
+    <ClCompile Include="cSkyBox.cpp" />
     <ClCompile Include="cSpriteManager.cpp" />
     <ClCompile Include="cTerrain.cpp" />
     <ClCompile Include="cTimeMgr.cpp" />

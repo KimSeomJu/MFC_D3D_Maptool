@@ -1,10 +1,7 @@
 #include "StdAfx.h"
 #include "cMainGame.h"
 #include "cImage.h"
-#include "cScene_00.h"
-#include "cScene_01.h"
-#include "cScene_02.h"
-#include "cScene_Terrain.h"
+#include "cSceneMapTool.h"
 
 cMainGame::cMainGame(void)
 {
@@ -17,29 +14,6 @@ cMainGame::~cMainGame(void)
 //셋팅
 HRESULT cMainGame::Init(void)
 {
-	//랜덤시드
-	SetRandomSeed();
-	
-	//디바이스 생성
-	CreateDevice();
-
-	//매니져 셋팅
-	TIME_MGR->Init();
-	LOG_MGR->Init( LOG_WINDOW | LOG_FILE, g_hWnd, "Dump" );
-	DXFONT_MGR->Init( Device );	
-	GIZMO_MGR->Init( Device );
-	SPRITE_MGR->Init( Device );
-	SCENE_MGR->Init();
-	
-	//게임에 사용되는 씬 추가
-	SCENE_MGR->AddScene( "송대관", new cScene_00() );
-	SCENE_MGR->AddScene( "태진아", new cScene_01() );
-	SCENE_MGR->AddLoadingScene( "로딩씬", new cScene_02() );
-	SCENE_MGR->AddScene("지형", new cScene_Terrain());
-	//게임 시작씬
-	SCENE_MGR->ChangeScene( "송대관" );
-	
-	//return E_FAIL;
 	return S_OK;		
 }	
 
@@ -53,22 +27,19 @@ HRESULT cMainGame::Init(HWND ghwnd)
 
 	//매니져 셋팅
 	TIME_MGR->Init();
-	LOG_MGR->Init(LOG_WINDOW | LOG_FILE, g_hWnd, "Dump");
+	//LOG_MGR->Init(LOG_WINDOW | LOG_FILE, g_hWnd, "Dump");
 	DXFONT_MGR->Init(Device);
 	GIZMO_MGR->Init(Device);
 	SPRITE_MGR->Init(Device);
 	SCENE_MGR->Init();
 
 	//게임에 사용되는 씬 추가
-	SCENE_MGR->AddScene("송대관", new cScene_00());
-	SCENE_MGR->AddScene("태진아", new cScene_01());
-	SCENE_MGR->AddLoadingScene("로딩씬", new cScene_02());
-	SCENE_MGR->AddScene("지형", new cScene_Terrain());
-
-	//게임 시작씬
-	SCENE_MGR->ChangeScene("송대관");
-
+	SCENE_MGR->AddScene("maptool", new cSceneMapTool());
+	//게임 s
+	SCENE_MGR->ChangeScene("maptool");
 	//return E_FAIL;
+
+
 	return S_OK;
 }
 

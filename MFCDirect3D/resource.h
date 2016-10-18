@@ -53,14 +53,18 @@
 #define IDC_SLIDER2                     1034
 #define IDC_SLIDER3                     1035
 #define IDC_SLIDER4                     1036
+#define IDC_EDIT4                       1040
+#define IDC_EDIT5                       1041
+#define IDC_SCROLLBAR2                  1043
+#define IDC_SLIDER5                     1044
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        320
+#define _APS_NEXT_RESOURCE_VALUE        322
 #define _APS_NEXT_COMMAND_VALUE         32771
-#define _APS_NEXT_CONTROL_VALUE         1038
+#define _APS_NEXT_CONTROL_VALUE         1045
 #define _APS_NEXT_SYMED_VALUE           311
 #endif
 #endif

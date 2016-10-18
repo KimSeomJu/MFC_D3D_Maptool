@@ -3,7 +3,9 @@
 //
 
 #pragma once
+//다이렉트 메인프레임
 #include "cMainGame.h"
+
 
 class CMFCDirect3DView : public CView
 {

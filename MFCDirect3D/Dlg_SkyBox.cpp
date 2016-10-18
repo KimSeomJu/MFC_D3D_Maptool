@@ -76,7 +76,11 @@ void CDlg_SkyBox::OnBnClickedButton1()
 		CArchive ar(&fp, CArchive::load);
 		ar >> str;
 
+		//에디트 박스에 표시될 파일경로
 		m_EditOne = strPathName;
+		//D3D로 넘길 전역변수 파일경로
+		g_skyBoxName = strPathName;
+
 		UpdateData(FALSE);
 
 	}
@@ -86,7 +90,8 @@ void CDlg_SkyBox::OnBnClickedButton1()
 void CDlg_SkyBox::OnBnClickedButton2()
 {
 	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
-
+	if (m_EditOne != L"null")//초기화되어있지 않으면,즉 파일이 로드되었으면
+		g_isCkActBtnSkyBox = true;
 }
 
 //불러온파일
@@ -97,14 +102,12 @@ void CDlg_SkyBox::OnEnChangeEdit1()
 	//BOOL bSaveAndValidate 에 
 	//TRUE 값이 들어가면 컨트롤에 있는 값을 변수로 보내고 갱신을 하는 것입니다.
 	//FALSE 값이 들어가면 변수에 있는 값을 컨트롤에 보내고 갱신을 하는 것입니다.
-	
-
 }
 
 
 void CDlg_SkyBox::OnChangeEditOne()
 {
-	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+
 }
 
 

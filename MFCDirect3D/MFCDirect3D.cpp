@@ -1,4 +1,3 @@
-
 // MFCDirect3D.cpp : 응용 프로그램에 대한 클래스 동작을 정의합니다.
 //
 
@@ -10,11 +9,9 @@
 #include "MFCDirect3DDoc.h"
 #include "MFCDirect3DView.h"
 
-
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
-
 
 // CMFCDirect3DApp
 
@@ -43,7 +40,6 @@ CMFCDirect3DApp::CMFCDirect3DApp()
 
 CMFCDirect3DApp theApp;
 
-
 // CMFCDirect3DApp 초기화
 
 BOOL CMFCDirect3DApp::InitInstance()
@@ -60,7 +56,6 @@ BOOL CMFCDirect3DApp::InitInstance()
 
 	CWinAppEx::InitInstance();
 
-
 	EnableTaskbarInteraction(FALSE);
 
 	// RichEdit 컨트롤을 사용하려면  AfxInitRichEdit2()가 있어야 합니다.	
@@ -75,7 +70,6 @@ BOOL CMFCDirect3DApp::InitInstance()
 	// 적절한 내용으로 수정해야 합니다.
 	SetRegistryKey(_T("로컬 응용 프로그램 마법사에서 생성된 응용 프로그램"));
 	LoadStdProfileSettings(4);  // MRU를 포함하여 표준 INI 파일 옵션을 로드합니다.
-
 
 	InitContextMenuManager();
 
@@ -99,12 +93,9 @@ BOOL CMFCDirect3DApp::InitInstance()
 		return FALSE;
 	AddDocTemplate(pDocTemplate);
 
-
 	// 표준 셸 명령, DDE, 파일 열기에 대한 명령줄을 구문 분석합니다.
 	CCommandLineInfo cmdInfo;
 	ParseCommandLine(cmdInfo);
-
-
 
 	// 명령줄에 지정된 명령을 디스패치합니다.
 	// 응용 프로그램이 /RegServer, /Register, /Unregserver 또는 /Unregister로 시작된 경우 FALSE를 반환합니다.
@@ -177,10 +168,6 @@ void CMFCDirect3DApp::SaveCustomState()
 }
 
 // CMFCDirect3DApp 메시지 처리기
-
-
-
-
 
 BOOL CMFCDirect3DApp::OnIdle(LONG lCount)
 {

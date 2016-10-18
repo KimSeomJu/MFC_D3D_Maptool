@@ -10,6 +10,43 @@
 #include "MFCDirect3DView.h"
 #include "MenuFormView.h"
 
+//===== MFC -> DirectX 전역변수=======================================================
+//(stdafx.h에 extern 선언 후 정의할 것!)
+
+ToolTab g_ToolTab = TERRAIN;
+
+//SKYBOX
+CString g_skyBoxName;					//cubemap파일명
+bool g_isCkActBtnSkyBox = false;		//cubemap적용트리거스위치
+
+//TERRAIN
+int g_terrainX = 0;
+int g_terrainY = 0;
+CB_TerrainLandlist g_CB_Landlist = LandUnselect;
+CB_TerrainLandBrush g_CB_LandBrushList = BrushUnselect;
+CString g_heightMapPath;
+bool g_isCkActBtnHeightMap = false;
+int g_terrainBrushSize = 0;
+int g_terrainBrushPower = 0;
+
+RB_TerrainBrushKind g_RB_TerrainBrushKind = upbrush;
+
+//OBJECT
+TREE_Object g_TREE_Object = objectUnselect;
+TREE_ObjectTree g_TREE_ObjectTree = treeUnselect;
+TREE_ObjectRock g_TREE_ObjectRock = rockUnselect;
+TREE_ObjectBuild g_TREE_ObjectBuild = buildUnselect;
+
+RB_ObjectBrushKind g_RB_ObjectBrushKind = manybrush;
+int g_objectBrushSize = 0;
+
+int g_objectCtrlScale = 0;
+int g_objectCtrlRX = 0;
+int g_objectCtrlRY = 0;
+int g_objectCtrlRZ = 0;
+//===================================================================================
+
+
 BEGIN_MESSAGE_MAP(CSplitterX, CSplitterWnd)
 	ON_WM_NCHITTEST()
 END_MESSAGE_MAP()
@@ -179,7 +216,7 @@ BOOL CMainFrame::OnCreateClient(LPCREATESTRUCT /*lpcs*/,
 	if (!m_wndSplitter.CreateStatic(this, 1, 2))		
 		return FALSE;
 	int nSizeX = rect.right - rect.left;
-	int nMenuSize = nSizeX / 5;			// 6 분의 1 사이즈로 메뉴 창 크기 지정
+	int nMenuSize = nSizeX / 5;			// 5 분의 1 사이즈로 메뉴 창 크기 지정
 	if (!m_wndSplitter.CreateView(0, 0, RUNTIME_CLASS(CMFCDirect3DView),
 		CSize(nSizeX - nMenuSize, 0), pContext))		
 		return FALSE;

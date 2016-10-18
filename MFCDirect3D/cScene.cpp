@@ -23,8 +23,8 @@ cScene::cScene(void)
 	//this->pDirectionLightCamera->AttachTo( this->pSceneBaseDirectionLight->pTransform );
 
 	//기본 값
-	this->pSceneBaseDirectionLight->Color = D3DXCOLOR( 1, 1, 1, 1 );
-	this->pSceneBaseDirectionLight->Intensity = 1.0f;
+	this->pSceneBaseDirectionLight->Color = D3DXCOLOR( 0, 0, 0, 1 );
+	this->pSceneBaseDirectionLight->Intensity = 0.0f;
 
 	//그림자 거리
 	shadowDistance = 100.0f;
@@ -37,7 +37,9 @@ cScene::cScene(void)
 	this->pDirectionLightCamera->orthoSize = shadowDistance * 1.5f;	//투영크기는 그림자크기로...
 
 	//방향성광원 카메라의 RenderToTexture 준비
-	this->pDirectionLightCamera->ReadyShadowTexture( 4096 );
+	//this->pDirectionLightCamera->ReadyShadowTexture( 4096 );
+	this->pDirectionLightCamera->ReadyShadowTexture( 1024 );
+
 }
 
 
@@ -142,13 +144,10 @@ void cScene::Render()
 	//환경 랜더
 	this->RenderEnvironment();
 
-
-
 	//랜더된다.
 	this->Scene_Render0();
 	this->Scene_Render1();
-	this->Scene_Render2();
-	
+	this->Scene_Render2();	
 	
 #ifdef _DEBUG		//디버그 모드에서만 실행
 		//디바이스 랜더링 종료 명령
@@ -161,19 +160,17 @@ void cScene::Render()
 	this->pMainCamera->RenderTextureEnd( 1, 1 );		//1 번스테이지에 셋팅된 1 RenderTarget 을 종료 시킨다. 
 	this->pMainCamera->RenderTextureEnd( 0, 0 );		//0 번스테이지에 셋팅된 0 RenderTarget 을 종료 시킨다. 
 	
-
 	//
 	// Post Effect
 	//
 
-	//this->RenderBase();
-	//this->RenderOutline();
-	this->RenderGlow();
+	this->RenderBase();
+	this->RenderOutline();
+	//this->RenderGlow();
 
 
 	this->Scene_Render_AfterPostEffect( this->pMainCamera->GetRenderTexture( 0 ) );
-
-
+	
 	//스플라이트 랜더
 	SPRITE_MGR->BeginSpriteRender();
 	this->Scene_RenderSprite();
@@ -229,7 +226,6 @@ void cScene::RenderEnvironment()
 	this->evironmentEffect->SetMatrix( "matWVP", &matWVP );
 	this->evironmentEffect->SetMatrix( "matWorld", &matWorld );
 
-
 	//그려라...
 	UINT numPass;
 	this->evironmentEffect->Begin( &numPass, 0 );		//셰이더로 그린다는 것을 알리고 pass 수를 얻는다.
@@ -254,7 +250,6 @@ void cScene::ReadyShadowMap( std::vector<cBaseObject*>* renderObjects, cTerrain*
 	//방향성광원에 붙은 카메라의 Frustum 업데이트
 	this->pDirectionLightCamera->UpdateMatrix();
 	this->pDirectionLightCamera->UpdateFrustum();
-
 
 	//다이렉션라이팅 카메라에 들어오는 애들만 그린다...
 	static std::vector<cBaseObject*>		shadowCullObject;
@@ -309,7 +304,6 @@ void cScene::ReadyShadowMap( std::vector<cBaseObject*>* renderObjects, cTerrain*
 	cXMesh_Static::sStaticMeshEffect->SetMatrix( "matLightViewProjection", 
 		&this->pDirectionLightCamera->GetViewProjectionMatrix() );
 
-
 	//쉐도우 Texture
 	cXMesh_Skinned::sSkinnedMeshEffect->SetTexture( "Shadow_Tex", 
 		this->pDirectionLightCamera->GetShadowTexture() );
@@ -357,7 +351,6 @@ void cScene::RenderBase()
 			D3DFMT_INDEX16, 
 			this->scenePlaneVertex, 
 			sizeof( SCENE_VERTEX ) );
-
 
 		this->postEffect->EndPass();
 	}

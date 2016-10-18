@@ -36,6 +36,8 @@ public:
 
 	virtual void OnInitialUpdate();
 	afx_msg void OnTcnSelchangeTab1(NMHDR *pNMHDR, LRESULT *pResult);
+
+
 };
 
 

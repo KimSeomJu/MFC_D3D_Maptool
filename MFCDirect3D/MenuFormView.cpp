@@ -105,16 +105,19 @@ void CMenuFormView::OnTcnSelchangeTab1(NMHDR *pNMHDR, LRESULT *pResult)
 		m_pDlgTerrain->ShowWindow(SW_SHOW);
 		m_pDlgObject->ShowWindow(SW_HIDE);
 		m_pDlg_SkyBox->ShowWindow(SW_HIDE);
+		g_ToolTab = TERRAIN;
 	break;
 	case 1:
 		m_pDlgTerrain->ShowWindow(SW_HIDE);
 		m_pDlgObject->ShowWindow(SW_SHOW);
 		m_pDlg_SkyBox->ShowWindow(SW_HIDE);
+		g_ToolTab = OBJECT;
 	break;
 	case 2:
 		m_pDlgTerrain->ShowWindow(SW_HIDE);
 		m_pDlgObject->ShowWindow(SW_HIDE);
 		m_pDlg_SkyBox->ShowWindow(SW_SHOW);
+		g_ToolTab = SKYBOX;
 		break;
 	}
 	*pResult = 0;
